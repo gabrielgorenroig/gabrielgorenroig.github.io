@@ -59,7 +59,7 @@ ninja.data = [{
           section: "News",},{id: "news-good-news-our-paper-modal-logic-with-relations-over-paths-a-theoretical-development-through-comonadic-semantics-has-been-accepted-into-jlc",
           title: 'Good news: our paper Modal Logic with Relations over Paths: a Theoretical Development...',
           description: "",
-          section: "News",},{id: "news-another-year-in-my-phd-adventure-has-gone-by-as-part-of-my-phd-coursework-in-2024-i-have-taken-the-following-classes-differential-topology-homological-algebra-and-algebraic-geometry-wow",
+          section: "News",},{id: "news-another-year-in-my-phd-adventure-has-gone-by-as-part-of-my-phd-coursework-in-2024-i-have-taken-the-following-classes-differential-topology-homological-algebra-and-algebraic-geometry",
           title: 'Another year in my PhD adventure has gone by. As part of my...',
           description: "",
           section: "News",},{id: "projects-project-1",
