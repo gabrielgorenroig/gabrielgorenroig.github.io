@@ -11,7 +11,7 @@ profile:
   more_info: >
     
 selected_papers: false # includes a list of papers marked as "selected={true}"
-research_interests: true
+# research_interests: true
 social: true # includes social icons at the bottom of the page
 
 announcements:
@@ -29,6 +29,6 @@ Hi there! I'm Gabo, a PhD student in Mathematics at [Universidad de Buenos Aires
 
 I am part of the [Logic, Language and Computability Research Group (GLyC)](https://glyc.dc.uba.ar/). My advisor is [Santiago Figueira](https://glyc.dc.uba.ar/santiago/). My research is funded by [CONICET](https://www.conicet.gov.ar/), Argentina's National Research Council.
 
-Below you will find a description of the main motivations behind my research, current and otherwise. I am always happy to discuss these topics, so please get in touch if you are so inclined.
+{% comment %}Below you will find a description of the main motivations behind my research, current and otherwise. I am always happy to discuss these topics, so please get in touch if you are so inclined.{% endcomment %}
 
 You can find my list of publications [here](publications).
