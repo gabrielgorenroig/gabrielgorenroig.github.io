@@ -9,7 +9,7 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    
+
 selected_papers: false # includes a list of papers marked as "selected={true}"
 # research_interests: true
 social: true # includes social icons at the bottom of the page
@@ -31,4 +31,4 @@ I am part of the [Logic, Language and Computability Research Group (GLyC)](https
 
 {% comment %}Below you will find a description of the main motivations behind my research, current and otherwise. I am always happy to discuss these topics, so please get in touch if you are so inclined.{% endcomment %}
 
-You can find my list of publications [here](publications).
+You can find my list of publications [here](/publications/).
