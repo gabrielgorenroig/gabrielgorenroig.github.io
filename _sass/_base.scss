@@ -1343,3 +1343,44 @@ ninja-keys::part(ninja-input-wrapper) {
   background-color: var(--global-theme-color);
   color: var(--global-text-color);
 }
+
+// Landing page: "see all news" link and compact talks list
+
+.see-all {
+  text-align: right;
+  font-size: 0.9rem;
+  margin-top: -0.5rem;
+}
+
+.talks {
+  .table {
+    margin-bottom: 0.5rem;
+  }
+
+  .table td,
+  .table th {
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    font-size: 0.95rem;
+  }
+
+  .talk-date {
+    width: 20%;
+    white-space: nowrap;
+    font-weight: 400;
+    color: var(--global-text-color-light);
+  }
+
+  .talk-title {
+    font-style: italic;
+  }
+
+  .talk-event {
+    color: var(--global-text-color-light);
+  }
+
+  .talk-link {
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+}

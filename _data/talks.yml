@@ -1,0 +1,95 @@
+# Talks, newest first. Rendered on the landing page by _includes/talks.liquid.
+# Fields: date (display string), title, event, location (optional), links (optional list of {label, url}).
+
+- date: Sep 2026
+  title: Adjunciones arbóreas para generalizaciones de la lógica modal básica
+  event: I Encuentro Conjunto SBM–UMA 2026
+  location: Mar del Plata, Argentina
+
+- date: Aug 2026
+  title: Arboreal Adjunctions from Shapes
+  event: Semantics and Compositionality for Expressiveness and Complexity (ESSLLI 2026 Workshop)
+  location: Prague, Czech Republic
+
+- date: Jul 2026
+  title: Arboreal Categories from Shapes
+  event: Topology, Algebra and Categories in Logic (TACL) 2026
+  location: Kraków, Poland
+
+- date: Jul 2026
+  title: Arboreal Adjunctions from Shapes
+  event: Structure Meets Power Workshop, FLoC 2026
+  location: Lisbon, Portugal (remote)
+
+- date: May 2026
+  title: Arboreal Adjunctions from Shapes
+  event: III Encontro Brasileiro em Teoria das Categorias
+  location: UFJF, Juiz de Fora, Brazil (remote)
+  links:
+    - label: recording
+      url: https://www.youtube.com/live/a45xOivMEF0?si=7nJhFmNwZEb7BUD9&t=27617
+
+- date: Apr 2026
+  title: Arboreal Adjunctions from Shapes
+  event: New York Category Theory Seminar
+  location: online
+  links:
+    - label: recording
+      url: https://www.youtube.com/watch?v=iHfigfJz_-o
+
+- date: Jul 2025
+  title: Arboreal Coreflections
+  event: Topos Institute Seminar
+  location: Berkeley, California, USA
+  links:
+    - label: recording
+      url: https://www.youtube.com/watch?v=cBtySZMrtgA
+
+- date: Jun 2025
+  title: Idempotent Arboreal Covers
+  event: Foundational Methods in Computer Science (FMCS) 2025
+  location: Ottawa, Canada
+
+- date: Jun 2025
+  title: Idempotent Arboreal Covers
+  event: Applied Category Theory (ACT) 2025
+  location: Gainesville, Florida, USA
+  links:
+    - label: slides
+      url: https://drive.google.com/file/d/1dwZMJYdVXKjUdTUpkPVOyHB8Y6NRN-C1/view
+
+- date: Jul 2024
+  title: Generalised Unions of Conjunctive Queries in the Algebraic Data Model
+  event: Topology, Algebra and Categories in Logic (TACL) 2024
+  location: Barcelona, Spain
+
+- date: Jun 2024
+  title: Presenting Profunctors
+  event: Applied Category Theory (ACT) 2024
+  location: Oxford, UK
+  links:
+    - label: recording
+      url: https://youtu.be/EnN1-ZuMEU0?si=Sx5bo4C6HMlThPIf
+
+- date: Jul 2022
+  title: Path Predicate Modal Logic and its Comonadic Semantics
+  event: Structure Meets Power Workshop, ICALP 2022
+  links:
+    - label: slides
+      url: https://www.cst.cam.ac.uk/files/smp2022-1745-goren.pdf
+
+- date: Jun 2021
+  title: Stochastic Game Logic, Coalgebraically
+  event: Applied Category Theory (ACT) 2021
+  location: Cambridge, UK (remote)
+  links:
+    - label: recording
+      url: https://www.youtube.com/watch?v=4np1yqwPy0g&list=PLCOXjXDLt3pZAujMKmfr5HACeKOcD2G0j&index=14&t=8049s
+
+- date: Aug 2019
+  title: Inferring Finite State Machines from Time Series
+  event: Santa Fe Institute REU Public Talks
+  location: Santa Fe, New Mexico, USA
+  links:
+    - label: recording
+      url: https://www.youtube.com/watch?v=0ukLLTJusPc

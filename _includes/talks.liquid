@@ -1,0 +1,18 @@
+<div class="talks">
+  <table class="table table-sm table-borderless">
+    {% for talk in site.data.talks %}
+      <tr>
+        <th scope="row" class="talk-date">{{ talk.date }}</th>
+        <td>
+          <span class="talk-title">{{ talk.title }}</span>
+          <span class="talk-event">
+            — {{ talk.event }}{% if talk.location %}, {{ talk.location }}{% endif %}.
+          </span>
+          {% for link in talk.links %}
+            <a class="talk-link" href="{{ link.url }}" target="_blank" rel="noopener noreferrer">[{{ link.label }}]</a>
+          {% endfor %}
+        </td>
+      </tr>
+    {% endfor %}
+  </table>
+</div>

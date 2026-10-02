@@ -16,8 +16,10 @@ social: true # includes social icons at the bottom of the page
 
 announcements:
   enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: # leave blank to include all the news in the `_news` folder
+  scrollable: false # adds a vertical scroll bar if there are more than 3 news items
+  limit: 3 # only the latest news on the landing page; the rest lives at /news/
+
+talks: true # includes the full list of talks from _data/talks.yml
 
 latest_posts:
   enabled: false
