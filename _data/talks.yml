@@ -1,5 +1,6 @@
-# Talks, newest first. Rendered on the landing page by _includes/talks.liquid.
-# Fields: date (display string), title, event, location (optional), links (optional list of {label, url}).
+# Talks and posters, newest first. Rendered on the landing page by _includes/talks.liquid.
+# Fields: date (display string), title, event, location (optional), links (optional list of {label, url}),
+# poster (optional, true for poster presentations).
 
 - date: Sep 2026
   title: Adjunciones arbóreas para generalizaciones de la lógica modal básica
@@ -37,6 +38,12 @@
     - label: recording
       url: https://www.youtube.com/watch?v=iHfigfJz_-o
 
+- date: Aug 2025
+  title: Arboreal Coreflections
+  event: Escuela de Ciencias Informáticas (ECI) 2025
+  location: Buenos Aires, Argentina
+  poster: true
+
 - date: Jul 2025
   title: Arboreal Coreflections
   event: Topos Institute Seminar
@@ -58,6 +65,12 @@
     - label: slides
       url: https://drive.google.com/file/d/1dwZMJYdVXKjUdTUpkPVOyHB8Y6NRN-C1/view
 
+- date: Aug 2024
+  title: Presentaciones de profunctores para bases de datos (Profunctor Presentations for Databases)
+  event: Escuela de Ciencias Informáticas (ECI) 2024
+  location: Buenos Aires, Argentina
+  poster: true
+
 - date: Jul 2024
   title: Generalised Unions of Conjunctive Queries in the Algebraic Data Model
   event: Topology, Algebra and Categories in Logic (TACL) 2024
@@ -70,6 +83,15 @@
   links:
     - label: recording
       url: https://youtu.be/EnN1-ZuMEU0?si=Sx5bo4C6HMlThPIf
+
+- date: Jul 2022
+  title: Juegos, indistinguibilidad y comónadas (Games, Indistinguishability and Comonads)
+  event: Escuela de Ciencias Informáticas (ECI) 2022
+  location: Buenos Aires, Argentina
+  poster: true
+  links:
+    - label: poster
+      url: /assets/pdf/poster-eci2022.pdf
 
 - date: Jul 2022
   title: Path Predicate Modal Logic and its Comonadic Semantics

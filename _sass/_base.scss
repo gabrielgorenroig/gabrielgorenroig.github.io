@@ -1379,6 +1379,20 @@ ninja-keys::part(ninja-input-wrapper) {
     color: var(--global-text-color-light);
   }
 
+  .talk-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    line-height: 1;
+    padding: 0.15rem 0.35rem;
+    margin-right: 0.3rem;
+    vertical-align: 0.1rem;
+    border: 1px solid var(--global-theme-color);
+    border-radius: 3px;
+    color: var(--global-theme-color);
+  }
+
   .talk-link {
     font-size: 0.85rem;
     white-space: nowrap;
