@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I gave a talk at the *Santa Fe Institute* in Santa Fe, New Mexico, USA, in the context of the REU program. Title: *Inferring Finite State Machines from Time Series*.  [recording](https://www.youtube.com/watch?v=0ukLLTJusPc)  
+I gave a talk at the _Santa Fe Institute_ in Santa Fe, New Mexico, USA, in the context of the REU program. Title: _Inferring Finite State Machines from Time Series_. [recording](https://www.youtube.com/watch?v=0ukLLTJusPc)

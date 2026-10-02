@@ -16,6 +16,7 @@ nav_order: 1
 <div class="publications">
 
 {% bibliography --group_by none %}
+
 <!-- Puedo sacar el --group_by none si ninguna de mis entradas tiene "forthcoming"... -->
 
 </div>
