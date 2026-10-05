@@ -16,6 +16,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
+        },{id: "nav-news",
+          title: "News",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/news/";
+          },
         },{id: "nav-blog",
           title: "Blog",
           description: "",
@@ -65,19 +72,15 @@ ninja.data = [{
           section: "News",},{id: "news-in-the-past-few-weeks-i-have-given-two-talks-on-the-topic-of-what-i-am-calling-arboreal-coreflections-one-at-the-applied-category-theory-act-2025-conference-in-gainesville-florida-usa-and-another-at-the-foundational-methods-in-computer-science-fmcs-2025-workshop-in-ottawa-canada",
           title: 'In the past few weeks I have given two talks on the topic...',
           description: "",
+          section: "News",},{id: "news-updates-coming-soon",
+          title: '(Updates coming soon!)',
+          description: "",
           section: "News",},{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
         handler: () => {
           window.open("mailto:%6D%79 %66%69%72%73%74 %6E%61%6D%65 %69%6D%6D%65%64%69%61%74%65%6C%79 %66%6F%6C%6C%6F%77%65%64 %62%79 '%67%6F%72%65%6E' %61%74 %47%6F%6F%67%6C%65'%73 %6D%61%69%6C%69%6E%67 %73%65%72%76%69%63%65", "_blank");
-        },
-      },{
-        id: 'social-github',
-        title: 'GitHub',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://github.com/gabrielgorenroig", "_blank");
         },
       },{
         id: 'social-orcid',
