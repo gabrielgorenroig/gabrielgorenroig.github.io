@@ -1,6 +1,12 @@
+{% comment %}
+  News list: items from `_news/` plus blog posts marked `news: true`, newest first.
+  See README.md ("News") for the three kinds of items.
+{% endcomment %}
+{% assign blog_news = site.posts | where: 'news', true %}
+{% assign news = site.news | concat: blog_news | sort: 'date' | reverse %}
 <div class="news">
-  {% if site.news != blank %}
-    {% assign news_size = site.news | size %}
+  {% if news != empty %}
+    {% assign news_size = news | size %}
     <div
       class="table-responsive"
       {% if include.limit and page.announcements.scrollable and news_size > 3 %}
@@ -8,7 +14,6 @@
       {% endif %}
     >
       <table class="table table-sm table-borderless">
-        {% assign news = site.news | reverse %}
         {% if include.limit and page.announcements.limit %}
           {% assign news_limit = page.announcements.limit %}
         {% else %}
@@ -22,9 +27,9 @@
                 {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
               {% else %}
                 {% comment %}
-                  Non-inline items: show the excerpt (first paragraph, or everything before
-                  `excerpt_separator` if set in the front matter) and link to the full page.
-                  The title is shown only on the full page.
+                  Non-inline news items and blog posts: show the excerpt (first paragraph, or
+                  everything before `excerpt_separator` if set in the front matter) and link
+                  to the full page. The title is shown only on the full page.
                 {% endcomment %}
                 {{ item.excerpt | remove: '<p>' | remove: '</p>' | strip | emojify }}
                 <a class="news-more" href="{{ item.url | relative_url }}">Read more&nbsp;&rarr;</a>
