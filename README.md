@@ -12,7 +12,7 @@ No se publica en el sitio (está en `exclude` en `_config.yml`).
 | Noticias | `_news/*.md` (+ posts con `news: true`) | landing (últimas 3) y `/news/` |
 | Charlas y posters | `_data/talks.yml` | landing, sección "Talks" |
 | Publicaciones | `_bibliography/papers.bib` | `/publications/` |
-| Blog | `_posts/*.md` | `/blog/` |
+| Blog | `_posts/*.md` (borradores en `_drafts/`) | `/blog/` |
 
 La landing se arma en `_layouts/about.liquid`; la cantidad de noticias que muestra se cambia con `announcements.limit` en `_pages/about.md`.
 
@@ -72,6 +72,8 @@ Primer párrafo: esto es lo que se ve en la lista de noticias.
 
 Resto del post...
 ```
+
+Hay un post de ejemplo con todos los campos comentados en `_drafts/ejemplo-de-post.md`. Lo que está en `_drafts/` no se publica; para usarlo, copiarlo a `_posts/` con fecha en el nombre. Para ver los borradores en el preview: `bundle exec jekyll serve --drafts`.
 
 ### Diferencias entre las modalidades 2 y 3
 
