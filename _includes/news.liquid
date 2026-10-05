@@ -21,7 +21,13 @@
               {% if item.inline %}
                 {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
               {% else %}
-                <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                {% comment %}
+                  Non-inline items: show the excerpt (first paragraph, or everything before
+                  `excerpt_separator` if set in the front matter) and link to the full page.
+                  The title is shown only on the full page.
+                {% endcomment %}
+                {{ item.excerpt | remove: '<p>' | remove: '</p>' | strip | emojify }}
+                <a class="news-more" href="{{ item.url | relative_url }}">Read more&nbsp;&rarr;</a>
               {% endif %}
             </td>
           </tr>
