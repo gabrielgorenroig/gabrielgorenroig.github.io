@@ -122,3 +122,23 @@ bundle exec jekyll serve --livereload
 El sitio queda en http://localhost:4000. Al guardar cambios en el contenido, la página se regenera y se recarga sola. Los cambios en `_config.yml` requieren reiniciar el servidor.
 
 Si Ruby tiene variables de gems de otro entorno, puede hacer falta `unset GEM_HOME GEM_PATH BUNDLE_PATH` antes. `Gemfile.lock` está en `.gitignore`: en un worktree nuevo hay que copiarlo desde el checkout principal.
+
+## Borradores de posts (rama local `drafts`)
+
+Los borradores viven en una rama **local** llamada `drafts` que nunca se pushea, para que no sean accesibles desde GitHub antes de publicarlos.
+
+- La rama tiene configurado `branch.drafts.pushRemote = no_push`, así que `git push` desde ahí falla en lugar de publicar. Si hay que recrear la configuración:
+  ```bash
+  git config branch.drafts.pushRemote no_push
+  ```
+- Escribir y commitear los borradores en `drafts` (en `_drafts/` o `_posts/`). Para verlos en el preview: `bundle exec jekyll serve --livereload --drafts`.
+- **No mergear `drafts` a `main`**: eso subiría todos los borradores y el historial de cada uno. Para publicar un post, traer solo ese archivo:
+  ```bash
+  git checkout main
+  git checkout drafts -- _posts/AAAA-MM-DD-titulo.md
+  git commit -m "Publish: titulo"
+  git push
+  ```
+  (Si el borrador estaba en `_drafts/`, moverlo a `_posts/` con fecha en el nombre.) Subir a `main` una sola versión final evita filtrar el historial de borradores.
+- Mantener `drafts` al día con `main` cuando haga falta: `git checkout drafts && git merge main`.
+- Es una rama sin respaldo remoto: si se pierde el disco, se pierden los borradores.
