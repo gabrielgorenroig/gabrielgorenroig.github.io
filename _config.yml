@@ -140,6 +140,8 @@ collections:
       layout: post
     output: true
     permalink: /:collection/:title/
+  research_interests:
+    output: false # content only; rendered by _includes/research_interests.liquid
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
