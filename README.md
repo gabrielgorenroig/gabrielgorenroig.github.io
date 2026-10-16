@@ -113,6 +113,21 @@ Los links pueden ser externos o rutas del sitio (por ejemplo `/assets/pdf/poster
 
 Entradas BibTeX en `_bibliography/papers.bib`, procesadas por jekyll-scholar con la plantilla `_layouts/bib.liquid`. Campos propios del tema: `arxiv`, `selected`, `pdf`, `slides`, etc. (ver `filtered_bibtex_keywords` en `_config.yml`).
 
+## Research interests
+
+Se activan con `research_interests: true` en el front matter de `_pages/about.md`. Cada interés es un archivo Markdown en `_research_interests/` (colección sin páginas propias, ver `collections` en `_config.yml`); el include `_includes/research_interests.liquid` los muestra en el orden alfabético de los nombres de archivo (por eso llevan prefijo numérico: `0-`, `1-`, …) como bloques desplegables.
+
+```markdown
+---
+title: Emergence   # título del bloque desplegable (el orden lo da el nombre del archivo)
+---
+Texto en Markdown...
+```
+
+- **Texto sin colapsar**: un archivo con `collapsible: false` (y sin `title`) se muestra como párrafo normal en la posición que le corresponda por su nombre. `0-intro.md` es la introducción de la sección; por su prefijo `0-` va antes de todos los bloques desplegables.
+- **Matemática**: usar `$$...$$` también en línea (por ejemplo `$$\mathcal{C}^\text{op}$$`); con `$...$` simples kramdown puede interpretar `_` o `*` como énfasis.
+- Agregar un interés nuevo = crear un archivo nuevo. Cambios en `_config.yml` requieren reiniciar el servidor.
+
 ## Preview local
 
 ```bash
@@ -123,22 +138,37 @@ El sitio queda en http://localhost:4000. Al guardar cambios en el contenido, la 
 
 Si Ruby tiene variables de gems de otro entorno, puede hacer falta `unset GEM_HOME GEM_PATH BUNDLE_PATH` antes. `Gemfile.lock` está en `.gitignore`: en un worktree nuevo hay que copiarlo desde el checkout principal.
 
-## Borradores de posts (rama local `drafts`)
+## Borradores y notas de redacción (rama local `drafts`)
 
-Los borradores viven en una rama **local** llamada `drafts` que nunca se pushea, para que no sean accesibles desde GitHub antes de publicarlos.
+La rama `drafts` es **local y nunca se pushea**. Sirve para posts y notas **nuevos** (borradores de blog, ideas, esquemas de noticias, versiones largas de textos) que no deben ser accesibles desde GitHub antes de publicarlos. El contenido que ya está en `main` se edita en `main`, no en `drafts`.
 
-- La rama tiene configurado `branch.drafts.pushRemote = no_push`, así que `git push` desde ahí falla en lugar de publicar. Si hay que recrear la configuración:
+- Tiene configurado `branch.drafts.pushRemote = no_push`, así que `git push` desde ahí falla en lugar de publicar. Si hay que recrear la configuración:
   ```bash
   git config branch.drafts.pushRemote no_push
   ```
-- Escribir y commitear los borradores en `drafts` (en `_drafts/` o `_posts/`). Para verlos en el preview: `bundle exec jekyll serve --livereload --drafts`.
-- **No mergear `drafts` a `main`**: eso subiría todos los borradores y el historial de cada uno. Para publicar un post, traer solo ese archivo:
+- Los borradores de posts van en `_drafts/` y las notas sueltas en `_notes/` (Jekyll ignora las carpetas con `_` que no son colecciones, así que no se publican aunque lleguen a `main`).
+- **No mergear `drafts` a `main`**: eso subiría todos los borradores y el historial de cada uno.
+
+### Carpeta separada para `drafts` (worktree)
+
+`drafts` vive abierta en su propia carpeta, `../sitio-DRAFTS/` (al lado de este repo), para no cambiar de rama:
+
+| Carpeta | Rama | Preview |
+|---|---|---|
+| `gabrielgorenroig.github.io/` | `main` | `localhost:4000` (`jekyll` en `.claude/launch.json`) |
+| `sitio-DRAFTS/` | `drafts` | `localhost:4001`, con `--drafts` (`jekyll-drafts`) |
+
+Para recrearla: `git worktree add "../sitio-DRAFTS" drafts` y copiar `Gemfile.lock` (está en `.gitignore`) desde el checkout principal. `git worktree list` muestra los worktrees; `git worktree remove ../sitio-DRAFTS` la elimina sin borrar la rama.
+
+### Flujo
+
+- **Escribir**: en `sitio-DRAFTS/` (rama `drafts`), con el preview del puerto 4001.
+- **Publicar un post**, desde la carpeta principal (`main`):
   ```bash
-  git checkout main
   git checkout drafts -- _posts/AAAA-MM-DD-titulo.md
   git commit -m "Publish: titulo"
   git push
   ```
-  (Si el borrador estaba en `_drafts/`, moverlo a `_posts/` con fecha en el nombre.) Subir a `main` una sola versión final evita filtrar el historial de borradores.
-- Mantener `drafts` al día con `main` cuando haga falta: `git checkout drafts && git merge main`.
-- Es una rama sin respaldo remoto: si se pierde el disco, se pierden los borradores.
+  (Si el borrador estaba en `_drafts/`, moverlo a `_posts/` con fecha en el nombre.) Sube una sola versión final, sin el historial de borradores.
+- **Traer lo nuevo de `main` a `drafts`**: desde `sitio-DRAFTS/`, `git merge main`.
+- La rama no tiene respaldo remoto: si se pierde el disco, se pierden los borradores.
